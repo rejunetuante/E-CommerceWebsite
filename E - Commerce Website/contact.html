@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<script>
+    var isFirstName = /^[A-Za-z\-]+$/;
+    var isLastName = /^[A-Za-z'\-]+$/;
+    var isPhone = /^(\+\d+)?(\(\d+\))?[\d]+$/;
+    var isAge = /^(1[0-2]\d|\d{1,2})$/;
+
+    var isEmail = /^\w+([\.\-]\w+)*\@\w+([\.\-]\w+)*\.\w+$/;
+    var isEmail2 = /^.*@[^_]*$/;
+
+    function send(what){
+        var message='';
+        if(!isFirstName.test(what.firstname.value))
+            message+='* a valid first name\n';
+        if(!isLastName.test(what.lastname.value))
+            message+='* a valid last name\n';
+        if(!isPhone.test(what.phone.value))
+            message+='* a valid phone number\n';
+        if(!isAge.test(what.age.value))
+            message+='* a valid age\n';
+        if(!isEmail.test(what.email.value))
+            message+='* a valid email address\n';
+
+        if(message=='')
+            alert("Data validated successfully!");
+        else
+            alert('Please enter:\n' + message);
+    }
+</script>
+
+<style>
+*{
+  text-decoration: none;
+}
+
+#header span{
+color: snow;
+text-decoration: none;
+font-size: 30px;
+font-weight: bold;
+padding-left: 10px;
+font-family: 'Roboto', sans-serif;
+}
+
+#header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 80px;
+background-color: darkred;
+box-shadow: 0 5px 15px rgb(231, 229, 226);
+position: sticky;
+top: 0;
+left: 0;
+}
+
+#navbar{
+text-transform: uppercase;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#navbar li{
+list-style: none;
+padding: 0 20px;
+}
+
+#navbar li a{
+text-decoration: none;
+font-size: 16px;
+font-weight: 600;
+color: snow;
+transition: 0.3s ease;
+}
+
+#navbar li a:hover{
+color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+td {
+   padding: 10px;
+   font-weight: bold;
+}
+
+h1 {
+    color: darkred;
+    padding-left: 600px;
+}
+
+table {
+   width: 100%;
+}
+
+
+
+.contact input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    
+}
+
+.contact input[type="text"]:hover {
+    outline: none;
+    border-color: darkred;
+    box-shadow: 0 0 5px darkred;
+}
+
+.contact input[type="text"]:focus {
+    border-color: darkred;
+    box-shadow: 0 0 5px darkred;
+}
+
+a button {
+  border-radius: 10px;
+  color: white;
+  background-color: darkred;
+  border: 2px solid darkred;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px black;
+  transition: all 0.3s ease;
+}
+
+a button:hover {
+  background-color: white;
+  color: darkred;
+}
+
+.contact td input[type="button"] {
+  border-radius: 10px;
+  color: white;
+  background-color: darkred;
+  border: 2px solid darkred;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px black;
+}
+.contact td input[type="button"] {
+  border-radius: 10px;
+  color: white;
+  background-color: darkred;
+  border: 2px solid darkred;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px black;
+  transition: all 0.3s ease;
+}
+
+.contact td input[type="button"]:hover {
+  background-color: white;
+  color: darkred;
+}
+
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.contact input[type="text"],
+  .contact textarea {
+    transition: all 0.3s ease;
+  }
+
+.contact input[type="text"]:hover,
+.contact textarea:hover {
+    transform: scale(1.1);
+}
+
+.contact input[type="text"]:focus,
+.contact textarea:focus {
+    border-color: darkred;
+    box-shadow: 0 0 5px darkred;
+}
+
+.contact textarea {
+    width: 500px;
+    border: 2px solid darkred;
+    transition: all 0.3s ease;
+}
+
+.contact textarea:focus {
+    border-color: darkred;
+    animation: border-animation 1s infinite;
+}
+.sign {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    padding-left: 450px;
+    display: flex;
+}
+
+  @keyframes border-animation {
+    0% {
+      border-color: darkred;
+    }
+    50% {
+      border-color: white;
+    }
+    100% {
+      border-color: darkred;
+    }
+  }
+                                                        
+</style>
+<body>
+    <section id="header">
+        <a href="#"><img src="ItachiLogo.jpg" class="logo" alt="#"><span>Ītachí</span></a>
+    
+        <div>
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+    </section>
+
+    <div class="contact">
+      <h1>Contact Us</h1>
+       <form>
+         <table>
+            <tr>
+                <td> First Name:</td>
+                <td><input type="text" name="firstname"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> Last Name:</td>
+                <td><input type="text" name="lastname"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> Phone Number:</td>
+                <td><input type="text" name="phone"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> Age:</td>
+                <td><input type="text" name="age"></td>
+                <td></td>
+            </tr>
+    
+            <tr>
+                <td> Email Address:</td>
+                <td><input type="text" name="email"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td><textarea name="message" rows="5"></textarea></td>
+                <td></td>
+              </tr>
+            <tr>
+                <td><input type="button" value="Send" onclick="send(this.form)"></td>
+            </tr>
+          </table>
+        </form>
+    </div>
+
+    <div class="sign">
+        <h6>You Don't have an account?</h6>
+        <a href="sign-up.html"><button>Sign-up</button></a>
+    </div>
+
+</body>
+</html>

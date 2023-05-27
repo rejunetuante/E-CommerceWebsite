@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    *{
+    text-decoration: none;
+  }
+
+  #header span{
+  color: snow;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+  #header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: darkred;
+    box-shadow: 0 5px 15px rgb(231, 229, 226);
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  #navbar{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navbar li{
+    list-style: none;
+    padding: 0 20px;
+  }
+
+  #navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: snow;
+    transition: 0.3s ease;
+  }
+
+  #navbar li a:hover{
+    color: black;
+  }
+
+  /* Cart Page */
+  #cart table{
+    padding-top: 50px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+  }
+
+  #cart table img{
+    width: 70px;
+  }
+
+  #cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+  }
+  #cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+  }
+  #cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+  }
+  #cart table td:nth-child(4)
+  #cart table td:nth-child(5)
+  #cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+  }
+  #cart table td:nth-child(5) input{
+    width: 45px;
+    padding: 10px 5px 10px 15px;
+  }
+
+  #cart table thead{
+    border: 1px solid darkred;
+    border-left: none;
+    border-right: none;
+  }
+
+  #cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+  }
+
+  #cart table tbody tr td{
+     padding-top: 15px;
+  }
+
+  #cart table tbody td{
+    font-size: 13px;
+  }
+
+  #cart-add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #coupon{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  #coupon h3
+  #subtotal h3{
+    padding-bottom: 15px;
+  }
+  #coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid darkred;
+  }
+
+  #coupon button,
+  #subtotal button{
+    background-color: darkred;
+    color: snow;
+    padding: 12px 20px;
+  }
+
+  #subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid darkred;
+    padding: 30px;
+  }
+  #subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #subtotal table td{
+    width: 50%;
+    border: 1px solid darkred;
+    padding: 10px;
+    font-size: 13px;
+  }
+</style>
+<body>
+    <section id="header">
+        <a href="#"><img src="ItachiLogo.jpg" class="logo" alt="#"><span>Ītachí</span></a>
+    
+        <div>
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+    </section>
+
+    <section id="cart" class="section-p1">
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Remove</td>
+            <td>Image</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+            <td><img src="Itachi1.jpg" alt=""></td>
+            <td>Itachi Product 1</td>
+            <td>₱135.00</td>
+            <td><input type="number" value="1"></td>
+            <td>₱540</td>
+          </tr>
+          <tr>
+            <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+            <td><img src="Itachi2.jpg" alt=""></td>
+            <td>Itachi Product 2</td>
+            <td>₱135.00</td>
+            <td><input type="number" value="1"></td>
+            <td>₱540</td>
+          </tr>
+          <tr>
+            <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+            <td><img src="Itachi3.jpg" alt=""></td>
+            <td>Itachi Product 3</td>
+            <td>₱135.00</td>
+            <td><input type="number" value="1"></td>
+            <td>₱540</td>
+          </tr>
+          <tr>
+            <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+            <td><img src="Itachi4.jpg" alt=""></td>
+            <td>Itachi Product 4</td>
+            <td>₱135.00</td>
+            <td><input type="number" value="1"></td>
+            <td>₱540</td>
+          </tr>
+          <tr>
+            <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+            <td><img src="Itachi5.jpg" alt=""></td>
+            <td>Itachi Product 5</td>
+            <td>₱135.00</td>
+            <td><input type="number" value="1"></td>
+            <td>₱540</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+      <div id="coupon">
+        <h3>Apply Coupon</h3>
+        <div>
+          <input type="text" placeholder="Enter Your Coupon">
+          <button class="normal">Applly</button>
+        </div>
+      </div>
+
+      <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+          <tr>
+            <td>Cart Subtotal</td>
+            <td>₱450.00</td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>₱450.00</strong></td>
+          </tr>
+        </table>
+        <button class="normal">Proceed to buy</button>
+      </div>
+    </section>
+
+    <script>
+     
+var buyButton = document.querySelector('#cart-add button.normal');
+
+
+function handleBuyButtonClick() {
+
+  var cartRows = document.querySelectorAll('#cart tbody tr');
+  if (cartRows.length === 0) {
+    alert('Your cart is empty. Please add products before proceeding to buy.');
+    return;
+  }
+
+ 
+
+  alert('Thank you for buying our product!');
+}
+
+
+buyButton.addEventListener('click', handleBuyButtonClick);
+
+var subtotal = 0;
+cartRows.forEach(function(row) {
+  var price = parseFloat(row.querySelector('td:nth-child(4)').textContent.replace('₱', ''));
+  var quantity = parseInt(row.querySelector('input[type="number"]').value);
+  subtotal += price * quantity;
+});
+
+
+alert('Subtotal: ₱' + subtotal.toFixed(2));
+
+
+var buyButton = document.querySelector('#cart-add button.normal');
+
+
+function handleBuyButtonClick() {
+ 
+  var cartRows = document.querySelectorAll('#cart tbody tr');
+  if (cartRows.length === 0) {
+    alert('Your cart is empty. Please add products before proceeding to buy.');
+    return;
+  }
+
+ 
+  var subtotal = 0;
+  cartRows.forEach(function(row) {
+    var price = parseFloat(row.querySelector('td:nth-child(4)').textContent.replace('₱', ''));
+    var quantity = parseInt(row.querySelector('input[type="number"]').value);
+    subtotal += price * quantity;
+  });
+
+ 
+  alert('Subtotal: ₱' + subtotal.toFixed(2));
+
+ 
+  alert('Thank you for buying our product!');
+}
+buyButton.addEventListener('click', handleBuyButtonClick);
+
+</script>
+</body>
+</html>

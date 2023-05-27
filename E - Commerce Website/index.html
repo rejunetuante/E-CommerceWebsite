@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Website</title> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+  *{
+    text-decoration: none;
+  }
+
+  #header span{
+  color: snow;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+  #header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: darkred;
+    box-shadow: 0 5px 15px rgb(231, 229, 226);
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  #navbar{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navbar li{
+    list-style: none;
+    padding: 0 20px;
+  }
+
+  #navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: snow;
+    transition: 0.3s ease;
+  }
+
+  #navbar li a:hover{
+    color: black;
+  }
+
+  /* Home Page */
+
+  .hero{
+    background-image: url(Itachibackground.jpg);
+    height: 90vh;
+    width: 88%;
+    background-size: cover;
+    display: flex;
+    padding: 0 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  
+  }
+  .hero h2{
+    padding: 10px 0px;
+    color: snow;
+  }
+  .hero h4{
+    color: snow;
+    padding: 10px 0px;
+  }
+  .hero h1{
+    color: snow;
+    padding: 10px 0px;
+  }
+  .hero p{
+    color: snow;
+    padding: 10px 0px;
+  }
+
+  .hero button{
+    border-radius: 10px;
+    color: white;
+    background-color: darkred;
+    border: 2px solid darkred;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px black;
+    transition: all 0.3s ease;
+  }
+  .hero button:hover{
+    background-color: white;
+    color: darkred;
+  }
+</style>
+<body>
+  <section id="header">
+    <a href="#"><img src="ItachiLogo.jpg" class="logo" alt="#"><span>Ītachí</span></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="hero">
+    <h4>Get ready to immerse yourself of our exclusive Itachi Collectible Toy's</h4>
+    <h2><span class="H2"></span></h2>
+    <h1>The undeniable coolness of Itachi Uchiha</h1>
+    <p><span class="input"></span></p>
+     <a href="shop.html"><button>Shop now</button></a>
+  </div>
+
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var type = new Typed(".H2",{
+      strings: ["Discover the power,"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop:true
+    });
+    var type = new Typed(".input",{
+      strings: ["Save more with coupons & up to 70% off!"],
+      typeSpeed: 100,
+      backSpeed: 20,
+      loop:true
+    })
+  </script>
+</body>
+</html>
